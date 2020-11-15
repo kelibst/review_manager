@@ -1,7 +1,7 @@
 module Api
   module V1
-  class HospitalsController < ApplicationController
-      before_action :set_hospital, only: [:show, :update, :destroy]
+    class HospitalsController < ApplicationController
+      before_action :set_hospital, only: %i[show update destroy]
 
       # GET /hospitals
       # GET /hospitals.json
@@ -11,8 +11,7 @@ module Api
 
       # GET /hospitals/1
       # GET /hospitals/1.json
-      def show
-      end
+      def show; end
 
       # POST /hospitals
       # POST /hospitals.json
@@ -42,16 +41,17 @@ module Api
         @hospital.destroy
       end
 
-      private
-        # Use callbacks to share common setup or constraints between actions.
-        def set_hospital
-          @hospital = Hospital.find(params[:id])
-        end
+        private
 
-        # Only allow a list of trusted parameters through.
-        def hospital_params
-          params.require(:hospital).permit(:name, :country, :address, :image, :slug)
-        end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_hospital
+        @hospital = Hospital.find(params[:id])
+      end
+
+      # Only allow a list of trusted parameters through.
+      def hospital_params
+        params.require(:hospital).permit(:name, :country, :address, :image, :slug)
+      end
     end
   end
 end

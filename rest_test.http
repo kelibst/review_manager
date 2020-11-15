@@ -25,11 +25,12 @@
 
     #update a hospital record
 
-    # PATCH http://127.0.0.1:3000/api/v1/hospitals/kekeli-hospital.json HTTP/1.1
+    # PATCH http://127.0.0.1:3000/api/v1/hospitals/5.json HTTP/1.1
     # content-type: application/json
 
     # {
-    #     "image": "https://www.royalhospitalho.com/my_uploads/2020/03/302bff67-415f-4eb6-b61e-ea95c263635c.jpg"
+    #     "name": "Kekeli Hospital Accra Love",
+    #     "slug": "Kekeli-Hospital-Accra-Love"
     # }
 
     # Review test
@@ -48,11 +49,11 @@
     #     "title":"Great hospital",
     #     "description":"some long description about this crazy review. blah blah blah!",
     #     "score": 3,
-    #     "hospital_id": 2
+    #     "hospital_id": 1
     # }
 
     # GET single review
-    # GET  http://127.0.0.1:3000/api/v1/reviews/1.json HTTP/1.1
+    # GET  http://127.0.0.1:3000/api/v1/reviews/4.json HTTP/1.1
     # content-type: application/json
 
 
